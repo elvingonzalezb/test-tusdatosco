@@ -1,7 +1,7 @@
 from fastapi import APIRouter, status, Response
-from config.db import db
-from schemas.causa import causaEntity, causasEntity
-from models.causa import Causa
+from src.config.db import db
+from src.schemas.causa import causaEntity, causasEntity
+from src.models.causa import Causa
 from bson import ObjectId
 from starlette.status import HTTP_204_NO_CONTENT
 from typing import List

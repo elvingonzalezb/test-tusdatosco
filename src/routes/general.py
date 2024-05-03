@@ -1,7 +1,7 @@
 from fastapi import APIRouter, status, Response
-from config.db import db
-from schemas.general import generalEntity, generalsEntity
-from models.general import General
+from src.config.db import db
+from src.schemas.general import generalEntity, generalsEntity
+from src.models.general import General
 from bson import ObjectId
 from starlette.status import HTTP_204_NO_CONTENT
 from typing import List

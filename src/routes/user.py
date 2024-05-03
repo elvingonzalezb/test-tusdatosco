@@ -1,13 +1,13 @@
 from fastapi import APIRouter, status, Response, HTTPException, Depends
-from config.db import db
+from src.config.db import db
 from fastapi.security import OAuth2PasswordRequestForm
 from fastapi.responses import RedirectResponse
-from schemas.user import userEntity, usersEntity, userToken
-from models.user import User, UserOut, UserAuth, TokenSchema, UserToken
+from src.schemas.user import userEntity, usersEntity, userToken
+from src.models.user import User, UserOut, UserAuth, TokenSchema, UserToken
 from bson import ObjectId
 from starlette.status import HTTP_204_NO_CONTENT
 from typing import List
-from utils.utils import (
+from src.utils.utils import (
     get_hashed_password,
     create_access_token,
     create_refresh_token,

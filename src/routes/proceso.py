@@ -1,7 +1,7 @@
 from fastapi import APIRouter, status, Response
-from config.db import db
-from schemas.proceso import progressEntity, progressesEntity
-from models.proceso import Proceso
+from src.config.db import db
+from src.schemas.proceso import progressEntity, progressesEntity
+from src.models.proceso import Proceso
 from bson import ObjectId
 from starlette.status import HTTP_204_NO_CONTENT
 from typing import List

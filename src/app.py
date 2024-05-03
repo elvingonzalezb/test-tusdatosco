@@ -4,10 +4,10 @@ from fastapi.staticfiles import StaticFiles
 from starlette.middleware.cors import CORSMiddleware
 from starlette.templating import Jinja2Templates
 import os
-from routes.general import general_router
-from routes.proceso import proceso_router
-from routes.user import user_router
-from routes.causa import causas_router
+from src.routes.general import general_router
+from src.routes.proceso import proceso_router
+from src.routes.user import user_router
+from src.routes.causa import causas_router
 
 # Directorio base donde se encuentra el script de servidor
 base_dir = os.path.dirname(os.path.abspath(__file__))
@@ -21,7 +21,7 @@ app = FastAPI(
 # Configurar middleware CORS
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:3000"],  # Permitir solicitudes desde este origen
+    allow_origins=["http://localhost:3000", "https://54.87.149.41/"],
     allow_credentials=True,
     allow_methods=["GET", "POST", "PUT", "DELETE"],
     allow_headers=["*"],
